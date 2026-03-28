@@ -22,11 +22,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     color: var(--ink);
-    background: linear-gradient(
-        to bottom right,
-        var(--paper-1),
-        var(--paper-2)
-    );
+    background: linear-gradient(to bottom right, var(--paper-1), var(--paper-2));
 }
 
 a {
@@ -46,31 +42,19 @@ img {
     display: block;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: var(--font-heading);
     margin: 0;
     color: var(--ink);
 }
 
-h1 {
-    font-size: clamp(2.6rem, 5vw, 4rem);
-    line-height: 1.05;
-}
+h1 { font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.05; }
+h2 { font-size: clamp(2.1rem, 3.6vw, 2.8rem); }
+h3 { font-size: clamp(1.35rem, 2.4vw, 1.8rem); }
 
-h2 {
-    font-size: clamp(2.1rem, 3.6vw, 2.8rem);
-}
+p { margin: 0 0 1.2rem; }
 
-h3 {
-    font-size: clamp(1.35rem, 2.4vw, 1.8rem);
-}
-
-p {
-    margin: 0 0 1.2rem;
-}
-
+/* Skip link */
 .skip-link {
     position: absolute;
     top: 16px;
@@ -82,11 +66,9 @@ p {
     text-decoration: none;
     z-index: 999;
 }
+.skip-link:focus-visible { left: 16px; }
 
-.skip-link:focus-visible {
-    left: 16px;
-}
-
+/* Header */
 .site-header {
     position: sticky;
     top: 0;
@@ -132,6 +114,7 @@ p {
     background: rgba(47, 43, 39, 0.08);
 }
 
+/* Sections */
 .section {
     padding: clamp(64px, 8vw, 96px) clamp(20px, 6vw, 48px);
 }
@@ -152,6 +135,10 @@ p {
     max-width: 640px;
 }
 
+.section--alt  { background: rgba(255, 255, 255, 0.54); }
+.section--alt2 { background: rgba(255, 255, 255, 0.28); }
+
+/* About / Hero */
 .section--about {
     background: linear-gradient(to top right, var(--paper-1), var(--paper-2));
 }
@@ -167,10 +154,7 @@ p {
 .section--about .section__inner::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     background-image: url("assets/mountain.svg");
     background-repeat: no-repeat;
     background-size: min(64vw, 650px) auto;
@@ -179,18 +163,8 @@ p {
     mix-blend-mode: multiply;
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.12));
     pointer-events: none;
-    mask-image: radial-gradient(
-        circle at 72% 42%,
-        rgba(0, 0, 0, 0.85) 28%,
-        rgba(0, 0, 0, 0.22) 65%,
-        transparent 100%
-    );
-    -webkit-mask-image: radial-gradient(
-        circle at 72% 42%,
-        rgba(0, 0, 0, 0.85) 28%,
-        rgba(0, 0, 0, 0.22) 65%,
-        transparent 100%
-    );
+    mask-image: radial-gradient(circle at 72% 42%, rgba(0,0,0,0.85) 28%, rgba(0,0,0,0.22) 65%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at 72% 42%, rgba(0,0,0,0.85) 28%, rgba(0,0,0,0.22) 65%, transparent 100%);
     z-index: 0;
 }
 
@@ -218,9 +192,7 @@ p {
     color: var(--ink-muted);
 }
 
-.hero__description {
-    color: var(--ink-muted);
-}
+.hero__description { color: var(--ink-muted); }
 
 .hero__cta {
     display: flex;
@@ -228,6 +200,7 @@ p {
     gap: 12px;
 }
 
+/* Buttons */
 .button {
     display: inline-flex;
     align-items: center;
@@ -241,9 +214,7 @@ p {
     letter-spacing: 0.01em;
     border: 1px solid transparent;
     text-decoration: none;
-    transition:
-        transform 180ms ease,
-        filter 180ms ease;
+    transition: transform 180ms ease, filter 180ms ease;
 }
 
 .button--primary {
@@ -268,6 +239,7 @@ p {
     border-color: var(--ink);
 }
 
+/* Metrics */
 .metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -288,13 +260,7 @@ p {
     font-family: var(--font-heading);
 }
 
-.section--ridge,
-.section--forest,
-.section--camp,
-.section--valley {
-    background: rgba(255, 255, 255, 0.54);
-}
-
+/* Cards */
 .work-grid,
 .writing-list {
     display: grid;
@@ -302,13 +268,8 @@ p {
 }
 
 @media (min-width: 900px) {
-    .work-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .writing-list {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+    .work-grid    { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .writing-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .work-card,
@@ -343,6 +304,7 @@ p {
     text-decoration: underline;
 }
 
+/* Resume */
 .resume {
     display: grid;
     gap: clamp(24px, 5vw, 36px);
@@ -356,8 +318,7 @@ p {
 }
 
 .resume__highlights,
-.resume__details ul,
-.contact__items {
+.resume__details ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -365,29 +326,17 @@ p {
     gap: 10px;
 }
 
-.resume__note {
-    font-family: var(--font-sans);
-    color: var(--ink-muted);
-    background: rgba(47, 43, 39, 0.08);
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 12px;
-}
-
-.contact {
-    text-align: center;
-}
+/* Contact */
+.contact { text-align: center; }
 
 .contact__items {
-    grid-auto-flow: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 18px;
-}
-
-@media (max-width: 600px) {
-    .contact__items {
-        grid-auto-flow: row;
-    }
 }
 
 .contact__link {
@@ -400,8 +349,9 @@ p {
     background: rgba(47, 43, 39, 0.06);
 }
 
+/* Footer */
 .site-footer {
-    padding: clamp(48px, 7vw, 64px) clamp(20px, 6vw, 48px);
+    padding: clamp(32px, 5vw, 48px) clamp(20px, 6vw, 48px);
     background: rgba(246, 237, 223, 0.92);
     border-top: 1px solid rgba(47, 43, 39, 0.12);
 }
@@ -409,18 +359,12 @@ p {
 .site-footer__inner {
     width: min(100%, var(--max-width));
     margin: 0 auto;
-    display: grid;
-    gap: 10px;
     text-align: center;
     font-family: var(--font-sans);
     color: var(--ink-muted);
 }
 
-[data-animate] {
-    opacity: 1;
-    transform: none;
-}
-
+/* Responsive */
 @media (max-width: 900px) {
     .section--about .section__inner {
         align-items: center;
@@ -428,8 +372,6 @@ p {
     }
 
     .about__content {
-        position: relative;
-        z-index: 1;
         max-width: 620px;
     }
 
@@ -439,9 +381,7 @@ p {
 }
 
 @media (max-width: 720px) {
-    body {
-        font-size: 17px;
-    }
+    body { font-size: 17px; }
 
     .site-nav ul {
         flex-wrap: wrap;
