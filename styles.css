@@ -421,3 +421,7 @@ p { margin: 0 0 1.2rem; }
     unicode-bidi: bidi-override;
     direction: rtl;
 }
+
+.btns-top {
+     margin-top:5%; 
+}
