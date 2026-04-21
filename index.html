@@ -40,19 +40,21 @@
                     <div class="about__content">
                         <span class="eyebrow">PhD Researcher · Cryptography</span>
                         <h1 class="hero__title">
-                            Building the math that makes digital trust possible.
+                            Gaspard Anthoine
                         </h1>
                         <p class="hero__description">
                             I'm a predoctoral researcher at the IMDEA Software
-                            Institute in Madrid, supervised by Dario Fiore. My
-                            work spans verifiable computation on data streams,
-                            homomorphic signatures, zero-knowledge proofs, and
-                            composability of cryptographic protocols.
+                            Institute in Madrid, supervised by <a href="https://www.dariofiore.it/">Dario Fiore</a>. My
+                            work aims to explore the limits of succinct proof systems.
+                            In more detail I'm interested in studying the trade-off between assumptions, 
+                            efficiency and security guarantees one can obtain for advance primitives like SNARKs, homomorphic signatures, vector commitments...
+                            Recently I also got interested into anonymous credentials! Feel free to email me if you want to talk about any of this.
                         </p>
                         <div class="hero__cta">
                             <a
                                 class="button button--primary"
-                                href="mailto:gaspard.anthoine@imdea.org"
+                                onclick="this.href='mailto:' + 'gaspard' + '.' + 'anthoine' + '@' + 'imdea.org'"
+                                href="#"
                                 >Email me</a
                             >
                             <a class="button button--ghost" href="#publications"
@@ -61,16 +63,8 @@
                         </div>
                         <dl class="metrics">
                             <div>
-                                <dt>Accepted papers</dt>
-                                <dd>5 at major venues</dd>
-                            </div>
-                            <div>
-                                <dt>PhD started</dt>
-                                <dd>2022 · UPM Madrid</dd>
-                            </div>
-                            <div>
-                                <dt>Upcoming in 2026</dt>
-                                <dd>EUROCRYPT &amp; FC</dd>
+                                <dt>Research Interests</dt>
+                                <dd>Succint Proof Systems, Signatures, <br> Anonymous Credentials,  Verifiable Computations, <br> Provable Security</dd>
                             </div>
                         </dl>
                     </div>
@@ -82,124 +76,83 @@
                     <div class="section__header">
                         <h2 class="section__title">Publications</h2>
                         <p class="section__subtitle">
-                            Conference papers on verifiable computation,
-                            homomorphic signatures, accumulators, and
-                            zero-knowledge proofs.
+                            Conference papers.
                         </p>
                     </div>
-                    <div class="work-grid">
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">EUROCRYPT 2026</p>
-                                <h3>
-                                    Lower Bounding Update Frequency in Short
-                                    Accumulators and Vector Commitments
-                                </h3>
-                            </header>
-                            <p>
-                                H. Abusalah, G. Anthoine, G. Avitabile,
-                                E. Giunta
-                            </p>
-                            <a
-                                class="work-card__link"
-                                href="https://eprint.iacr.org/2025/1558"
-                                target="_blank"
-                                rel="noopener"
-                                >Read paper</a
-                            >
+                    <div class="pub-list">
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">In submission</p>
+                            <h3 class="pub-entry__title">
+                                What a Wonderful World: zkSNARKs in the
+                                Algebraic Group Model are Universally Composable
+                            </h3>
+                            <p class="pub-entry__authors">G. Anthoine, D. Fiore, M. Pancholi</p>
                         </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">FC 2026</p>
-                                <h3>
-                                    SoK: Lookup Table Arguments
-                                </h3>
-                            </header>
-                            <p>
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">In submission</p>
+                            <h3 class="pub-entry__title">
+                                Commit-and-Prove Subvector Arguments with
+                                Flexible Preprocessing and Aggregation
+                            </h3>
+                            <p class="pub-entry__authors">G. Anthoine, D. Fiore, A. Zapico</p>
+                        </article>
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">EUROCRYPT 2026</p>
+                            <h3 class="pub-entry__title">
+                                Lower Bounding Update Frequency in Short
+                                Accumulators and Vector Commitments
+                            </h3>
+                            <p class="pub-entry__authors">
+                                H. Abusalah, G. Anthoine, G. Avitabile, E. Giunta
+                                &mdash;
+                                <a href="https://eprint.iacr.org/2025/1558" target="_blank" rel="noopener" class="pub-entry__link">Read paper</a>
+                            </p>
+                        </article>
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">FC 2026</p>
+                            <h3 class="pub-entry__title">SoK: Lookup Table Arguments</h3>
+                            <p class="pub-entry__authors">
                                 H. Hafezi, G. Anthoine, M. Campanelli, D. Fiore
+                                &mdash;
+                                <a href="https://eprint.iacr.org/2025/1876" target="_blank" rel="noopener" class="pub-entry__link">Read paper</a>
                             </p>
-                            <a
-                                class="work-card__link"
-                                href="https://eprint.iacr.org/2025/1876"
-                                target="_blank"
-                                rel="noopener"
-                                >Read paper</a
-                            >
                         </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">FC 2025</p>
-                                <h3>
-                                    Verification-Efficient Homomorphic Signatures
-                                    for Verifiable Computation over Data Streams
-                                </h3>
-                            </header>
-                            <p>G. Anthoine, D. Cozzo, D. Fiore</p>
-                            <a
-                                class="work-card__link"
-                                href="https://eprint.iacr.org/2025/110"
-                                target="_blank"
-                                rel="noopener"
-                                >Read paper</a
-                            >
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">FC 2025</p>
+                            <h3 class="pub-entry__title">
+                                Verification-Efficient Homomorphic Signatures
+                                for Verifiable Computation over Data Streams
+                            </h3>
+                            <p class="pub-entry__authors">
+                                G. Anthoine, D. Cozzo, D. Fiore
+                                &mdash;
+                                <a href="https://eprint.iacr.org/2025/110" target="_blank" rel="noopener" class="pub-entry__link">Read paper</a>
+                            </p>
                         </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">CRYPTO 2024</p>
-                                <h3>
-                                    Fully-Succinct Multi-Key Homomorphic
-                                    Signatures from Standard Assumptions
-                                </h3>
-                            </header>
-                            <p>G. Anthoine, D. Balbás, D. Fiore</p>
-                            <a
-                                class="work-card__link"
-                                href="https://eprint.iacr.org/2024/895"
-                                target="_blank"
-                                rel="noopener"
-                                >Read paper</a
-                            >
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">CRYPTO 2024</p>
+                            <h3 class="pub-entry__title">
+                                Fully-Succinct Multi-Key Homomorphic
+                                Signatures from Standard Assumptions
+                            </h3>
+                            <p class="pub-entry__authors">
+                                G. Anthoine, D. Balbás, D. Fiore
+                                &mdash;
+                                <a href="https://eprint.iacr.org/2024/895" target="_blank" rel="noopener" class="pub-entry__link">Read paper</a>
+                            </p>
                         </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">Usenix Security 2021</p>
-                                <h3>
-                                    Dynamic Proofs of Retrievability with Low
-                                    Server Storage
-                                </h3>
-                            </header>
-                            <p>
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">Usenix Security 2021</p>
+                            <h3 class="pub-entry__title">
+                                Dynamic Proofs of Retrievability with Low
+                                Server Storage
+                            </h3>
+                            <p class="pub-entry__authors">
                                 G. Anthoine, J.-G. Dumas, M. Hanling,
                                 M. de Jonghe, A. Maignan, C. Pernet, D. Roche
+                                &mdash;
+                                <a href="https://hal.science/hal-02875379/" target="_blank" rel="noopener" class="pub-entry__link">Read paper</a>
                             </p>
-                            <a
-                                class="work-card__link"
-                                href="https://hal.science/hal-02875379/"
-                                target="_blank"
-                                rel="noopener"
-                                >Read paper</a
-                            >
-                        </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">In submission</p>
-                                <h3>
-                                    What a Wonderful World: zkSNARKs in the
-                                    Algebraic Group Model are Universally
-                                    Composable
-                                </h3>
-                            </header>
-                            <p>G. Anthoine, D. Fiore, M. Pancholi</p>
-                        </article>
-                        <article class="work-card">
-                            <header>
-                                <p class="work-card__meta">In submission</p>
-                                <h3>
-                                    Commit-and-Prove Subvector Arguments with
-                                    Flexible Preprocessing and Aggregation
-                                </h3>
-                            </header>
-                            <p>G. Anthoine, D. Fiore, A. Zapico</p>
                         </article>
                     </div>
                 </div>
@@ -210,40 +163,24 @@
                     <div class="section__header">
                         <h2 class="section__title">Writing</h2>
                     </div>
-                    <div class="writing-list">
-                        <article class="writing-card">
-                            <p class="writing-card__meta">Blog post · 2018</p>
-                            <h3>Ethereum ABI Encoding Explanation</h3>
-                            <p>
-                                A technical walkthrough of how Ethereum encodes
-                                function calls and data using the ABI
-                                specification. Published at B2Expand.
+                    <div class="pub-list">
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">Blog post · 2018</p>
+                            <h3 class="pub-entry__title">Ethereum ABI Encoding Explanation</h3>
+                            <p class="pub-entry__authors">
+                                A technical walkthrough of ABI encoding. Published at B2Expand.
+                                &mdash;
+                                <a href="https://medium.com/b2expand/abi-encoding-explanation-4f470927092d" target="_blank" rel="noopener" class="pub-entry__link">Read on Medium</a>
                             </p>
-                            <a
-                                class="work-card__link"
-                                href="https://medium.com/b2expand/abi-encoding-explanation-4f470927092d"
-                                target="_blank"
-                                rel="noopener"
-                                >Read on Medium</a
-                            >
                         </article>
-                        <article class="writing-card">
-                            <p class="writing-card__meta">Poster · CCS 2019</p>
-                            <h3>
-                                Proofs of Retrievability with Low Server Storage
-                            </h3>
-                            <p>
-                                M. Hanling, G. Anthoine, J-G. Dumas,
-                                A. Maignan, C. Pernet, D. S. Roche — ACM
-                                SIGSAC CCS'19.
+                        <article class="pub-entry">
+                            <p class="pub-entry__venue">Poster · CCS 2019</p>
+                            <h3 class="pub-entry__title">Proofs of Retrievability with Low Server Storage</h3>
+                            <p class="pub-entry__authors">
+                                M. Hanling, G. Anthoine, J-G. Dumas, A. Maignan, C. Pernet, D. S. Roche — ACM SIGSAC CCS'19.
+                                &mdash;
+                                <a href="https://dl.acm.org/doi/10.1145/3319535.3363266" target="_blank" rel="noopener" class="pub-entry__link">View at ACM</a>
                             </p>
-                            <a
-                                class="work-card__link"
-                                href="https://dl.acm.org/doi/10.1145/3319535.3363266"
-                                target="_blank"
-                                rel="noopener"
-                                >View at ACM</a
-                            >
                         </article>
                     </div>
                 </div>
@@ -259,53 +196,40 @@
                                 Institute, supervised by Dario Fiore (2022–present).
                             </li>
                             <li>
-                                Research visit at IRIF, CNRS Paris on anonymous
-                                credentials and sigma protocol standardization
-                                (June–December 2025).
-                            </li>
-                            <li>
-                                5 papers accepted at CRYPTO, Usenix Security,
-                                FC, and EUROCRYPT; 2 more in submission.
-                            </li>
-                            <li>
                                 MSc in Cybersecurity (cryptography) and MSc in
                                 Computer Science, Université Grenoble Alpes.
                             </li>
                         </ul>
+                        
                         <a
                             class="button button--primary"
-                            href="CV_gaspard_anthoine_en.pdf"
+                            onclick="this.href='mailto:' + 'gaspard' + '.' + 'anthoine' + '@' + 'imdea.org?subject=[CV Request]'"
+                            href="#"
                             target="_blank"
-                            rel="noopener"
-                            >Download CV</a
+                            >Ask for my full CV</a
+                        >
+                        <a
+                            class="button button--primary"
+                            href="https://dblp.org/pid/252/4152.html"
+                            target="_blank"
+                            >dblp</a
+                        >
+                        <a
+                            class="button button--primary"
+                            href="https://scholar.google.com/citations?hl=fr&user=Su2_2xIAAAAJ"
+                            target="_blank"
+                            >Google Scholar</a
                         >
                     </div>
                     <aside class="resume__details">
-                        <h3>Skills</h3>
+                        <h3>Accademic Service</h3>
+                        I have reviewed accademic papers for the following conferences: 
                         <ul>
-                            <li>
-                                <strong>Cryptography:</strong> ZK proofs,
-                                SNARKs, homomorphic signatures, accumulators,
-                                lattice-based crypto
-                            </li>
-                            <li>
-                                <strong>Programming:</strong> Rust, Python /
-                                SageMath, C, Java, JavaScript
-                            </li>
-                            <li>
-                                <strong>Languages:</strong> French (native),
-                                English (IELTS 7.5), Spanish (intermediate)
-                            </li>
-                        </ul>
-                        <h3>Outside research</h3>
-                        <ul>
-                            <li>Ski racing at national level</li>
-                            <li>Climbing &amp; chess</li>
-                            <li>Saxophone player</li>
-                            <li>
-                                Traveller: UK, USA, Australia, India,
-                                Scandinavia, Mali, Uzbekistan…
-                            </li>
+                            <li>SCN '24</li>
+                            <li>CCS '25</li>
+                            <li>Usenix '26</li>
+                            <li>Eurocrypt '26</li>
+                            <li>CRYPTO '26</li>
                         </ul>
                     </aside>
                 </div>
@@ -320,9 +244,10 @@
                     </p>
                     <div class="contact__items">
                         <a
-                            class="contact__link"
-                            href="mailto:gaspard.anthoine@imdea.org"
-                            >gaspard.anthoine@imdea.org</a
+                            class="contact__link reverse-email"
+                            onclick="this.href='mailto:' + 'gaspard' + '.' + 'anthoine' + '@' + 'imdea.org'"
+                            href="#"
+                            >gro.aedmi@eniohtna.drapsag</a
                         >
                         <a
                             class="contact__link"
@@ -331,7 +256,14 @@
                             rel="noopener"
                             >GitHub</a
                         >
-                    </div>
+                        <a
+                            class="contact__link"
+                            href="https://www.linkedin.com/in/gaspard-anthoine-93b48921a/"
+                            target="_blank"
+                            rel="noopener"
+                            >Linkedin</a
+                        >
+                    </div>         
                 </div>
             </section>
         </main>
